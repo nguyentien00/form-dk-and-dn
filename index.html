@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="Website Icon" type="png" href="https://i.pinimg.com/564x/4e/d5/39/4ed5397f808ef00d6e0f1ade963a8215.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí Hoặc Đăng Nhập </title>
+    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted plays-inline loop>
+        <source src="sound/Clouds Pass By While Sun Sets Against a Heavenly Purple Sky Timelapse Stock Footage [4K].mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <a href="https://www.facebook.com/profile.php?id=100023989994527" class="logo"><img src="https://beedesign.com.vn/wp-content/uploads/2020/09/logo-chu-T-logot.jpg"> Nguyễn Nam Tiến</a>
+            </nav>
+            <div class="nav-right">
+                <button class="btn white-btn" id="loginbtn" onclick="login()">Đăng Nhập</button>
+                <button class="btn" id="registerbtn" onclick="register()">Đăng Kí</button>
+            </div> 
+        </header>
+        <div class="form">
+            <div class="login">
+            <div class="left" id="login">
+                <form>
+                    <div class="top">
+                        <p>Bạn chưa có tài khoản đăng nhập? <a href="#" onclick="register()">Đăng Kí</a></p>
+                        <h2>Đăng Nhập</h2>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="text" placeholder="Tên tài khoản hoặc email" required>
+                        <span> <i class="fa-solid fa-user"></i></span>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" id="password" placeholder="Mật Khẩu" required>
+                        <span><i class="fa-solid fa-eye" id="bg" onclick="showHint()" aria-hidden="true"  ></i></span>
+                    </div>
+                    <div class="forget">
+                        <label><input type="checkbox">Nhớ lại</label>
+                        <p class="mb-0 mt-4 text-center"><a href="https://www.facebook.com/profile.php?id=100023989994527" class="link">Quên Mật Khẩu</a></p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www.facebook.com/profile.php?id=100023989994527">
+                            <button>Đăng Nhập</button>
+                          </a>
+                    </div>
+                    <div class="or">
+                        <p>or</p>
+                        <div class="with">
+                            <p class="mb-0 mt-4 text-center"><a href="https://www.facebook.com/profile.php?id=100023989994527" class="link"><i class="fa-brands fa-facebook fb"></i></p>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right" id="register">
+                <form>
+                    <div class="top">
+                        <p>Bạn đã có có tài khoản đăng nhập? <a href="#" onclick="login()">Đăng Nhập</a></p>
+                        <h2>Đăng Kí</h2>
+                    </div>
+                    <div class="two-input">
+                        <div class="input">
+                         <input type="text" placeholder="First name">
+                         <span> <i class="fa-solid fa-user"></i></span>
+                        </div>
+                        <div class="input">
+                         <input type="text" placeholder="Last name">
+                         <span> <i class="fa-solid fa-user"></i></span>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <input type="email" placeholder="Email">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" id="password" placeholder="Mật Khẩu" required>
+                        <span><i class="fa-solid fa-eye" id="bg" onclick="showHint()" aria-hidden="true"  ></i></span>
+                    </div>
+                    <div class="forget">
+                        <label><input type="checkbox"> Nhớ Lại</label>
+                        <p class="mb-0 mt-4 text-center"><a href="https://www.facebook.com/profile.php?id=100023989994527" class="link">term & conditions</a></p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www.facebook.com/profile.php?id=100023989994527">
+                            <button>Đăng kí</button>
+                        </a>
+                    </div> 
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementById('loginbtn');
+        var b = document.getElementById('registerbtn');
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        function login()
+        {
+            x.style.left = '1px';
+            y.style.right = '-390px';
+            a.className += ' white-btn';   
+            b.className = 'btn';
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+        function register()
+        {
+            x.style.left = '-390px';
+            y.style.right = '1px';
+            a.className = 'btn';   
+            b.className += ' white-btn';
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+    </script>
+    <script>
+        var st = false;
+        function showHint(){
+            if(st){
+                document.getElementById("password").setAttribute('type','password');
+                document.getElementById("bg").style.color = 'black';
+                st = false;
+            }
+            else{
+                document.getElementById("password").setAttribute('type','text');
+                document.getElementById("bg").style.color = 'white';
+                st = true;
+            }
+        }
+    </script>
+</body>
+</html>
